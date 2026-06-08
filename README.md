@@ -13,8 +13,9 @@ A plataforma apresenta:
 - Mapa operacional com pontos de risco geolocalizados.
 - Dashboard com indicadores de areas criticas, municipios monitorados, precisao do modelo e tempo medio de alerta.
 - Filtros por tipo de desastre: enchente, queimada e deslizamento.
-- Aba de IA preditiva simulada com escolha de regiao, tipo de evento, variaveis ambientais, score calculado, janela de ocorrencia e acao recomendada.
-- Central de alertas para priorizar comunicacoes preventivas.
+- Aba de IA preditiva simulada com escolha ou digitacao livre de regioes do Brasil, estado, tipo de evento, variaveis ambientais, score calculado, janela de ocorrencia e acao recomendada.
+- Central de alertas para priorizar comunicacoes preventivas, com atalho direto pelo botao "Enviar alerta".
+- Criacao de alerta a partir da previsao gerada pela IA.
 - Envio de alerta para usuario com persistencia em banco SQLite quando executado pelo backend local.
 
 ## Tecnologias utilizadas
@@ -50,20 +51,3 @@ http://127.0.0.1:4174
 4. Use os filtros do mapa, a IA preditiva e a central de envio de alertas.
 
 No GitHub Pages, o frontend funciona como demonstracao publica. Como o GitHub Pages nao executa Python nem SQLite, os alertas enviados na versao publicada sao salvos no armazenamento local do navegador.
-
-## Estrutura do projeto
-
-```text
-.
-|-- index.html
-|-- styles.css
-|-- app.js
-|-- server.py
-|-- README.md
-|-- ROTEIRO_VIDEO.md
-`-- ENTREGA.txt
-```
-
-## Observacao
-
-Esta e uma prova de conceito academica. Os dados exibidos sao simulados para demonstrar a experiencia da parte 2 do projeto.
