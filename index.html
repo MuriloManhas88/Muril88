@@ -50,36 +50,15 @@
 
       <section class="page active" id="page-dashboard" aria-label="Dashboard">
         <section class="status-grid" aria-label="Indicadores principais">
-          <article class="metric-card danger">
-            <span>Areas criticas</span>
-            <strong id="criticalCount">12</strong>
-            <small>+3 nas ultimas 2 horas</small>
-          </article>
-          <article class="metric-card warning">
-            <span>Municipios monitorados</span>
-            <strong>184</strong>
-            <small>Sudeste, Sul e Centro-Oeste</small>
-          </article>
-          <article class="metric-card calm">
-            <span>Precisao do modelo</span>
-            <strong>91%</strong>
-            <small>Com base em dados historicos</small>
-          </article>
-          <article class="metric-card info">
-            <span>Tempo medio de alerta</span>
-            <strong>42 min</strong>
-            <small>Antes do evento extremo</small>
-          </article>
+          <article class="metric-card danger"><span>Areas criticas</span><strong id="criticalCount">12</strong><small>+3 nas ultimas 2 horas</small></article>
+          <article class="metric-card warning"><span>Municipios monitorados</span><strong>184</strong><small>Sudeste, Sul e Centro-Oeste</small></article>
+          <article class="metric-card calm"><span>Precisao do modelo</span><strong>91%</strong><small>Com base em dados historicos</small></article>
+          <article class="metric-card info"><span>Tempo medio de alerta</span><strong>42 min</strong><small>Antes do evento extremo</small></article>
         </section>
 
         <section class="dashboard-grid">
           <article class="map-section">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow">Resumo operacional</p>
-                <h2>Eventos previstos nas proximas 24h</h2>
-              </div>
-            </div>
+            <div class="section-heading"><div><p class="eyebrow">Resumo operacional</p><h2>Eventos previstos nas proximas 24h</h2></div></div>
             <div class="event-bars">
               <div class="event-bar"><span>Enchentes</span><strong>46%</strong><div><i style="width:46%"></i></div></div>
               <div class="event-bar"><span>Queimadas</span><strong>33%</strong><div><i style="width:33%"></i></div></div>
@@ -88,12 +67,7 @@
           </article>
 
           <article class="analysis-panel">
-            <div class="section-heading compact">
-              <div>
-                <p class="eyebrow">Prioridade</p>
-                <h2>Fila de resposta</h2>
-              </div>
-            </div>
+            <div class="section-heading compact"><div><p class="eyebrow">Prioridade</p><h2>Fila de resposta</h2></div></div>
             <div class="priority-list">
               <div><strong>Rio do Sul - SC</strong><span>Acionar defesa civil e sirenes ribeirinhas</span></div>
               <div><strong>Petropolis - RJ</strong><span>Monitorar encostas e rotas de evacuacao</span></div>
@@ -106,10 +80,7 @@
       <section class="page" id="page-mapa" aria-label="Mapa de risco">
         <section class="map-section" aria-label="Mapa operacional de risco">
           <div class="section-heading">
-            <div>
-              <p class="eyebrow">Geolocalizacao</p>
-              <h2>Mapa operacional</h2>
-            </div>
+            <div><p class="eyebrow">Geolocalizacao</p><h2>Mapa operacional</h2></div>
             <div class="segmented-control" role="group" aria-label="Filtro de risco">
               <button class="segment active" data-filter="todos">Todos</button>
               <button class="segment" data-filter="enchente">Enchentes</button>
@@ -128,82 +99,22 @@
       <section class="page" id="page-alertas" aria-label="Alertas recentes">
         <section class="alerts-layout">
           <div class="alerts-section">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow">Resposta antecipada</p>
-                <h2>Central de alertas</h2>
-              </div>
-              <span class="last-update" id="lastUpdate">Atualizado agora</span>
-            </div>
+            <div class="section-heading"><div><p class="eyebrow">Resposta antecipada</p><h2>Central de alertas</h2></div><span class="last-update" id="lastUpdate">Atualizado agora</span></div>
             <div class="alerts-table" id="alertsTable"></div>
           </div>
 
           <aside class="alert-form-panel">
-            <div class="section-heading compact">
-              <div>
-                <p class="eyebrow">Banco de dados</p>
-                <h2>Enviar alerta ao usuario</h2>
-              </div>
-            </div>
-
+            <div class="section-heading compact"><div><p class="eyebrow">Banco de dados</p><h2>Enviar alerta ao usuario</h2></div></div>
             <form class="alert-form" id="userAlertForm">
-              <label>
-                Nome do usuario
-                <input id="recipientName" name="recipientName" type="text" placeholder="Ex: Ana Souza" required>
-              </label>
-
-              <label>
-                Contato
-                <input id="recipientContact" name="recipientContact" type="text" placeholder="Email ou telefone" required>
-              </label>
-
-              <label>
-                Cidade
-                <select id="alertCity" name="city" required>
-                  <option value="Rio do Sul - SC">Rio do Sul - SC</option>
-                  <option value="Petropolis - RJ">Petropolis - RJ</option>
-                  <option value="Corumba - MS">Corumba - MS</option>
-                  <option value="Manaus - AM">Manaus - AM</option>
-                  <option value="Recife - PE">Recife - PE</option>
-                  <option value="Belo Horizonte - MG">Belo Horizonte - MG</option>
-                </select>
-              </label>
-
-              <label>
-                Tipo de risco
-                <select id="alertEventType" name="eventType" required>
-                  <option value="enchente">Enchente</option>
-                  <option value="queimada">Queimada</option>
-                  <option value="deslizamento">Deslizamento</option>
-                </select>
-              </label>
-
-              <label>
-                Nivel
-                <select id="alertRiskLevel" name="riskLevel" required>
-                  <option value="alto">Alto</option>
-                  <option value="moderado">Moderado</option>
-                  <option value="baixo">Baixo</option>
-                </select>
-              </label>
-
-              <label>
-                Mensagem
-                <textarea id="alertMessage" name="message" rows="4" required>Alerta preventivo: area com risco monitorado pelo SpaceGuard AI. Acompanhe os canais oficiais e evite regioes vulneraveis.</textarea>
-              </label>
-
+              <label>Nome do usuario<input id="recipientName" name="recipientName" type="text" placeholder="Ex: Ana Souza" required></label>
+              <label>Contato<input id="recipientContact" name="recipientContact" type="text" placeholder="Email ou telefone" required></label>
+              <label>Cidade<input id="alertCity" name="city" type="text" list="brazilRegionOptions" placeholder="Digite uma cidade, estado ou regiao" required></label>
+              <label>Tipo de risco<select id="alertEventType" name="eventType" required><option value="enchente">Enchente</option><option value="queimada">Queimada</option><option value="deslizamento">Deslizamento</option></select></label>
+              <label>Nivel<select id="alertRiskLevel" name="riskLevel" required><option value="alto">Alto</option><option value="moderado">Moderado</option><option value="baixo">Baixo</option></select></label>
+              <label>Mensagem<textarea id="alertMessage" name="message" rows="4" required>Alerta preventivo: area com risco monitorado pelo SpaceGuard AI. Acompanhe os canais oficiais e evite regioes vulneraveis.</textarea></label>
               <button class="primary-button" type="submit">Salvar e enviar</button>
             </form>
-
-            <div class="saved-alerts">
-              <div class="section-heading compact">
-                <div>
-                  <p class="eyebrow">Historico</p>
-                  <h2>Alertas salvos</h2>
-                </div>
-              </div>
-              <div id="savedAlertsList" class="saved-alerts-list"></div>
-            </div>
+            <div class="saved-alerts"><div class="section-heading compact"><div><p class="eyebrow">Historico</p><h2>Alertas salvos</h2></div></div><div id="savedAlertsList" class="saved-alerts-list"></div></div>
           </aside>
         </section>
       </section>
@@ -211,90 +122,26 @@
       <section class="page" id="page-ia" aria-label="IA preditiva">
         <section class="ai-grid">
           <aside class="analysis-panel" aria-label="Analise preditiva">
-            <div class="section-heading compact">
-              <div>
-                <p class="eyebrow">Inteligencia artificial</p>
-                <h2>Simulador preditivo</h2>
-              </div>
-            </div>
-
-            <div class="risk-score">
-              <div class="score-ring" id="scoreRing"><span id="scoreValue">78</span></div>
-              <div>
-                <strong id="scoreLabel">Risco alto</strong>
-                <p>Modelo combinando imagens orbitais, previsao de chuva, calor, umidade do solo e inclinacao do terreno.</p>
-              </div>
-            </div>
-
+            <div class="section-heading compact"><div><p class="eyebrow">Inteligencia artificial</p><h2>Simulador preditivo</h2></div></div>
+            <div class="risk-score"><div class="score-ring" id="scoreRing"><span id="scoreValue">78</span></div><div><strong id="scoreLabel">Risco alto</strong><p>Modelo combinando imagens orbitais, previsao de chuva, calor, umidade do solo e inclinacao do terreno.</p></div></div>
             <div class="factor-list" id="factorList"></div>
           </aside>
 
           <section class="ai-console" aria-label="Console da IA">
             <div class="section-heading">
-              <div>
-                <p class="eyebrow">Modelo simulado</p>
-                <h2>Gerar previsao</h2>
-              </div>
-              <button class="primary-button" id="runPredictionButton">Rodar IA</button>
+              <div><p class="eyebrow">Modelo simulado</p><h2>Gerar previsao</h2></div>
+              <div class="top-actions"><button class="icon-button" id="runPredictionButton" aria-label="Rodar IA" title="Rodar IA">IA</button><button class="primary-button" id="createPredictionAlertButton">Criar alerta</button></div>
             </div>
-
             <div class="form-grid">
-              <label>
-                Regiao monitorada
-                <select id="regionSelect">
-                  <option value="Rio do Sul - SC">Rio do Sul - SC</option>
-                  <option value="Petropolis - RJ">Petropolis - RJ</option>
-                  <option value="Corumba - MS">Corumba - MS</option>
-                  <option value="Manaus - AM">Manaus - AM</option>
-                  <option value="Recife - PE">Recife - PE</option>
-                </select>
-              </label>
-
-              <label>
-                Evento analisado
-                <select id="eventSelect">
-                  <option value="enchente">Enchente</option>
-                  <option value="queimada">Queimada</option>
-                  <option value="deslizamento">Deslizamento</option>
-                </select>
-              </label>
-
-              <label>
-                Chuva prevista: <strong id="rainValue">70%</strong>
-                <input id="rainInput" type="range" min="0" max="100" value="70">
-              </label>
-
-              <label>
-                Focos de calor: <strong id="heatValue">35%</strong>
-                <input id="heatInput" type="range" min="0" max="100" value="35">
-              </label>
-
-              <label>
-                Umidade do solo: <strong id="soilValue">65%</strong>
-                <input id="soilInput" type="range" min="0" max="100" value="65">
-              </label>
-
-              <label>
-                Vulnerabilidade urbana: <strong id="urbanValue">74%</strong>
-                <input id="urbanInput" type="range" min="0" max="100" value="74">
-              </label>
+              <label>Regiao monitorada<input id="regionSelect" type="text" list="brazilRegionOptions" value="Rio do Sul - SC" placeholder="Digite qualquer regiao do Brasil"></label>
+              <label>Estado<select id="stateSelect"><option value="AC">Acre</option><option value="AL">Alagoas</option><option value="AP">Amapa</option><option value="AM">Amazonas</option><option value="BA">Bahia</option><option value="CE">Ceara</option><option value="DF">Distrito Federal</option><option value="ES">Espirito Santo</option><option value="GO">Goias</option><option value="MA">Maranhao</option><option value="MT">Mato Grosso</option><option value="MS">Mato Grosso do Sul</option><option value="MG">Minas Gerais</option><option value="PA">Para</option><option value="PB">Paraiba</option><option value="PR">Parana</option><option value="PE">Pernambuco</option><option value="PI">Piaui</option><option value="RJ">Rio de Janeiro</option><option value="RN">Rio Grande do Norte</option><option value="RS">Rio Grande do Sul</option><option value="RO">Rondonia</option><option value="RR">Roraima</option><option value="SC">Santa Catarina</option><option value="SP">Sao Paulo</option><option value="SE">Sergipe</option><option value="TO">Tocantins</option></select></label>
+              <label>Evento analisado<select id="eventSelect"><option value="enchente">Enchente</option><option value="queimada">Queimada</option><option value="deslizamento">Deslizamento</option></select></label>
+              <label>Chuva prevista: <strong id="rainValue">70%</strong><input id="rainInput" type="range" min="0" max="100" value="70"></label>
+              <label>Focos de calor: <strong id="heatValue">35%</strong><input id="heatInput" type="range" min="0" max="100" value="35"></label>
+              <label>Umidade do solo: <strong id="soilValue">65%</strong><input id="soilInput" type="range" min="0" max="100" value="65"></label>
+              <label>Vulnerabilidade urbana: <strong id="urbanValue">74%</strong><input id="urbanInput" type="range" min="0" max="100" value="74"></label>
             </div>
-
-            <div class="prediction-result">
-              <div>
-                <span>Probabilidade estimada</span>
-                <strong id="predictionPercent">78%</strong>
-              </div>
-              <div>
-                <span>Janela de ocorrencia</span>
-                <strong id="predictionWindow">0 a 6 horas</strong>
-              </div>
-              <div>
-                <span>Acao recomendada</span>
-                <strong id="predictionAction">Enviar alerta preventivo</strong>
-              </div>
-            </div>
-
+            <div class="prediction-result"><div><span>Probabilidade estimada</span><strong id="predictionPercent">78%</strong></div><div><span>Janela de ocorrencia</span><strong id="predictionWindow">0 a 6 horas</strong></div><div><span>Acao recomendada</span><strong id="predictionAction">Enviar alerta preventivo</strong></div></div>
             <div class="timeline" id="predictionTimeline" aria-label="Linha do tempo da previsao"></div>
           </section>
         </section>
@@ -302,8 +149,8 @@
     </main>
   </div>
 
+  <datalist id="brazilRegionOptions"></datalist>
   <div class="toast" id="toast" role="status" aria-live="polite">Alerta preventivo enviado aos canais integrados.</div>
-
   <script src="app.js"></script>
 </body>
 </html>
