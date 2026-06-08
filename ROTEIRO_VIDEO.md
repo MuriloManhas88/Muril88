@@ -17,8 +17,8 @@ Mostre:
 - Indicadores principais do dashboard.
 - Mapa operacional com pontos de risco.
 - Filtros por enchentes, queimadas e deslizamentos.
-- Aba de IA preditiva: selecione uma regiao, altere chuva, focos de calor, umidade do solo e vulnerabilidade urbana, depois rode a previsao para mostrar o score, a janela de ocorrencia e a acao recomendada.
-- Central de alertas: envie um alerta para usuario, explique que localmente ele grava em SQLite e no GitHub Pages fica como demonstracao no navegador.
+- Aba de IA preditiva: digite qualquer regiao do Brasil ou selecione uma sugestao, escolha o estado, altere chuva, focos de calor, umidade do solo e vulnerabilidade urbana, depois rode a previsao para mostrar o score, a janela de ocorrencia e a acao recomendada.
+- Central de alertas: mostre o botao "Enviar alerta" abrindo direto o formulario e crie um alerta a partir da previsao da IA.
 
 ## 4. Tecnologias
 
