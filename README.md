@@ -22,7 +22,11 @@ Envio de alerta para usuario com persistencia em banco SQLite quando executado p
 
 
 Tecnologias Utilizadas
-TecnologiaUsoHTML5Estrutura da interfaceCSS3Estilizacao e layout responsivoJavaScriptLogica do frontend e interatividadePythonServidor local (server.py)SQLitePersistencia dos alertas enviados (execucao local)
+
+HTML5 Estrutura da interface
+CSS3 Estilizacao e layout responsivo
+JavaScriptLogica do frontend e interatividade
+PythonServidor local (server.py)SQLitePersistencia dos alertas enviados (execucao local)
 
 Layout responsivo sem dependencias externas de framework.
 
